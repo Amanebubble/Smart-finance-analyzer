@@ -1,0 +1,25 @@
+{
+  "name": "smart-finance-analyzer",
+  "version": "0.1.0",
+  "description": "Smart Finance Analyzer (SFA) - Analisis financiero comparativo con ingesta OCR/IA y generacion de reportes PDF/Excel",
+  "main": "dist/main/main.js",
+  "author": "Smart Finance Analyzer Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build && electron .",
+    "start": "npm run dev",
+    "build": "tsc && node scripts/copy-assets.js",
+    "watch": "tsc -w",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build:win": "npm run build && electron-builder --win",
+    "build:dir": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "electron": "^44.1.1",
+    "electron-builder": "^26.15.3",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,81 @@
+:root {
+  --bg: #101318;
+  --sidebar: #171c24;
+  --text: #e6e9ee;
+  --muted: #8b93a1;
+  --accent: #4f8cff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: var(--sidebar);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+#nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#nav a:hover {
+  color: var(--text);
+  background: rgba(79, 140, 255, 0.08);
+}
+
+#nav a.active {
+  color: var(--accent);
+  background: rgba(79, 140, 255, 0.12);
+}
+
+.version {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+#view-description {
+  margin-top: 12px;
+  color: var(--muted);
+  max-width: 640px;
+}

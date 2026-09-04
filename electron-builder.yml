@@ -1,0 +1,32 @@
+appId: com.sfa.desktop
+productName: Smart Finance Analyzer
+copyright: Copyright © 2026 Smart Finance Analyzer Team
+asar: true
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**
+  - package.json
+  - "!dist/**/*.map"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: ${productName}-Setup-${version}.${ext}
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Smart Finance Analyzer
+  uninstallDisplayName: Smart Finance Analyzer
+  deleteAppDataOnUninstall: false
+
+npmRebuild: false
